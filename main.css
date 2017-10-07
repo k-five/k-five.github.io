@@ -1,0 +1,203 @@
+html{
+	background: url(w7.gif) no-repeat center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body{
+	color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.main-button{
+	margin-left: 22%;
+	width: 900px;
+	height: 60px;
+
+	/* for text the position */
+	/* background-color: red; */
+}
+.button1, .button2, .button3, .button4{
+	float: left;
+	padding: 10px;
+
+}
+#office{
+	background-color: #ff0;
+}
+#office:hover{
+    background-color: #f00;
+    -webkit-transition-duration: 0.0s;
+    -moz-transition-duration: 0.0s;
+    -o-transition-duration: 0.0s;
+    transition-duration: 0.0s;
+}
+
+.button1 p{
+	font-size: 250%;
+}
+.button2 p{
+	font-size: 200%;
+}
+.button3 p{
+	font-size: 150%;
+}
+.button4 p{
+	font-size: 100%;
+}
+
+button{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: large;
+
+	width: 200px;
+
+	background-color: #fff;
+	color: black;
+	padding: 8px 80px;
+	cursor: pointer;
+	border-radius: 3px;
+	border: none;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+button:hover{
+	background-color: #ff0;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* tooltip for all */
+	
+.tooltip{
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px solid black; */
+
+}
+.tooltip-button{
+    visibility: hidden;
+    width: 100%;
+    background-color: #eee;
+    color: #000;
+    text-align: center;
+    border-radius: 10px;
+    padding: 290px 0px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 30%;
+    margin-left: -60px;
+
+     /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+
+}
+.tooltip:hover .tooltip-button{
+    visibility: visible;
+    opacity: 0.5;
+}
+.b1{
+    padding: 0px 30px 131px;
+    text-align: right;
+    border: 3px solid #ff0;
+    width: 795px;
+    text-align: justify;
+    font-weight: bold;
+}
+.b2{
+    padding: 0px 30px 225px;
+    text-align: right;
+    border: 3px solid #ff0;
+    width: 575px;
+    text-align: justify;
+    font-weight: bold;
+}
+.b3{
+    padding: 0px 30px 450px;
+    text-align: right;
+    border: 3px solid #ff0;
+    width: 355px;
+    text-align: justify;
+    font-weight: bold;
+}
+.b4{
+    padding: 0px 30px 370px;
+    text-align: right;
+    border: 3px solid #ff0;
+    width: 137px;
+    text-align: justify;
+    font-weight: bold;
+}
+/* for overlay */
+.container{
+    position: relative;
+    color: #ff0;
+    font-size: 50px;
+    width: 400px;
+    height: 400px;
+    top: 150px;
+    right: 130px;
+
+    cursor: crosshair;
+
+    /* hiding the border */
+    /* border: 1px yellow solid; */
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
+    white-space: nowrap;
+}
+.overlay{
+    position: relative;
+    visibility: hidden;
+    top: 440px;
+    opacity: 0;
+    transition: 1s ease;
+}
+.container:hover .overlay{
+    visibility: visible;
+    top: 0;
+    opacity: 1;
+
+}
+.text{
+    position: relative;
+    left: 60px;
+}
+/* for last-sentence */
+.last-sentence{
+    position: absolute;
+    bottom: 0px;
+    left: 22.9%;
+    letter-spacing: 1.9px;
+}
+
+.short-secntence{
+    position: absolute;
+    bottom: 0px;
+    right: 22.8%;
+
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 4px;
+    text-align: center;
+    font-weight: bold;
+    float:left;
+}
+.short-secntence:hover{
+
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 4px;
+    color: #ff0;
+}
+span{
+    color: #ff0;
+}
+span:hover{
+    color: #f00;
+}
