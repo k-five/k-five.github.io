@@ -1,0 +1,257 @@
+/*
+The major browsers use the following prefixes:
+
+-webkit- (Chrome, Safari, newer versions of Opera, almost all iOS browsers (including Firefox for iOS); basically, any WebKit based browser)
+-moz- (Firefox)
+-o- (Old, pre-WebKit, versions of Opera)
+-ms- (Internet Explorer and Microsoft Edge)
+*/
+
+*
+{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Josefin Slab', serif;
+    background-color: #EEE;
+    maring: 0;
+    padding: 0;
+}
+
+@media screen and ( max-width: 1120px )
+{
+    main .contact li a
+    {
+        background-color: #EEF;
+        /* opacity: 0.5; */
+    }
+
+    .contact
+    {
+        position: -webkit-sticky;
+        position: sticky;
+        -webgit-position: -webkit-sticky;
+        -webgit-position: sticky;;
+        -moz-position: sticky;;
+        -o-position: sticky;;
+        -ms-position: sticky;;
+        top: 0;
+    }
+
+    main .familiar
+    {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .app a,
+    .familiar a,
+    .familiar .table-header
+     {
+         margin-right: 0px;
+     }
+
+    .contact,
+    .human,
+    .system,
+    .script,
+    .markup,
+    .devopt,
+    .miscell,
+    .sport,
+    .app
+     {
+         margin-top: 50px;
+     }
+
+    .familiar li a,
+    div .table-header
+    {
+        width: 300px;
+    }
+}
+
+@media screen and ( max-width: 950px )
+{
+    .contact li a
+    {
+        opacity: 0.6;
+    }
+
+    .contact li,
+    .app li
+     {
+         clear: left;
+     }
+
+    .app li a
+    {
+        width: 300px;
+    }
+
+    /* main .familiar */
+    /* { */
+    /*     display: block; */
+    /*     margin: 0 auto; */
+    /* } */
+
+    /* .familiar a, */
+    /* .familiar .table-header */
+    /* .app a, */
+    /* { */
+    /*     margin-right: 0px; */
+    /* } */
+}
+
+.text
+{
+    width: 100%;
+    font-size: xx-large;
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    color: #CB0000;
+}
+
+.contact,
+.human,
+.system,
+.script,
+.markup,
+.devopt,
+.miscell,
+.sport,
+.app
+ {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+ }
+
+/* .contact ul, */
+/* .app ul */
+/* { */
+/*     list-style-type: none; */
+/*     margin: 0 auto; */
+/*     padding: 0; */
+/* } */
+
+/* .contact li */
+/* { */
+/*     float: left; */
+/* } */
+
+.contact li a
+{
+    width: 300px;
+    display: block;
+    padding: 10px;
+    margin-right: -3px;
+
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    border: 3px #FFF solid;
+
+    background-color: #EEE;
+    -webkit-transition: background-color 1s, letter-spacing 1s;
+    -o-transition: background-color 1s, letter-spacing 1s;
+    transition: background-color 1s, letter-spacing 1s;
+}
+
+.contact li a:hover
+{
+    background-color: #FF0;
+    letter-spacing: 2px;
+}
+
+.app li a:hover
+{
+    background-color: #8F0;
+}
+
+.familiar
+{
+    width: 100%;
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+div a,
+.table-header
+ {
+     width: 150px;
+     display: block;
+     padding: 10px;
+     margin-right: 10px;
+     margin-top: -3px;
+     text-align: center;
+     text-decoration: none;
+     border: 3px #FFF solid;
+
+     background-color: #EEE;
+     -webkit-transition: background-color 1s;
+     -o-transition: background-color 1s;
+     transition: background-color 1s;
+ }
+
+.app a
+{
+    background-color: #EEF;
+    margin-right: -3px;
+}
+
+div a:link,
+div a:visited
+{
+    color: #000;
+}
+
+div a:hover,
+div a:active
+{
+    background-color: #0FF;
+    color: #000;
+}
+
+li
+{
+    /* float: left; */
+}
+
+ul
+{
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.contact li,
+.app li
+ {
+     float: left;
+ }
+
+.copyright
+{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    font-size: large;
+}
+
+sup
+{
+    color: #CB0000;
+}
