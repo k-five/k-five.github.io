@@ -1,7 +1,1 @@
-### 10_cv3  
-
-focus on:  
- - creating buttons with `a` element  
- - `float: left;` several `div`  
- - a simple `animation` css  
- 
+# [k-five.github.io](https://k-five.github.io)
