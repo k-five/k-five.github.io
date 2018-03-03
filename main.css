@@ -17,8 +17,15 @@ body
 {
     font-family: 'Josefin Slab', serif;
     background-color: #EEE;
-    maring: 0;
+    margin: 0;
     padding: 0;
+}
+#svg
+{
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    z-index: -1;
 }
 
 @media screen and ( max-width: 1120px )
