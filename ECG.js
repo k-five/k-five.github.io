@@ -13,7 +13,7 @@ function ECG()
 
 ECG.prototype.draw = function()
 {
-    var result = '';
+    var result = 'M';
 
     while( this.begin <= this.window_width )
     {
@@ -129,10 +129,10 @@ ECG.prototype.svg = function()
 
 ECG.prototype.set_total_length = function( size )
 {
-    var line = doc.id( 'path' );
-    this.total_length = Math.floor( line.getTotalLength() );
-    line.setAttribute( 'stroke-dasharray', this.total_length );
-    line.setAttribute( 'stroke-dashoffset', this.total_length );
+    var path = doc.id( 'path' );
+    this.total_length = Math.floor( path.getTotalLength() );
+    path.setAttribute( 'stroke-dasharray', this.total_length );
+    path.setAttribute( 'stroke-dashoffset', this.total_length );
     // line.style.animationDuration = this.ecg_counter + 's';
 }
 
@@ -148,8 +148,8 @@ ECG.prototype.animate = function()
     animate.setAttribute( 'dur', this.ecg_counter + 's' );
     animate.setAttribute( 'repeatCount', 'indefinite' );
 
-    var polyline = doc.id( 'path' );
-    polyline.appendChild( animate );
+    var path = doc.id( 'path' );
+    path.appendChild( animate );
 
     // for blinking
     // <animate attributeName="stroke" attributreType="XML" to="#EEE" dur="1" repeatCount="indefinite" >
@@ -161,7 +161,7 @@ ECG.prototype.animate = function()
     // animate.setAttribute( 'dur', '1s' );
     // animate.setAttribute( 'repeatCount', 'indefinite' );
 
-    // polyline.appendChild( animate );
+    // path.appendChild( animate );
 
     // <animate attributeName="stroke" attributreType="XML" begin="svg.mousemove" to="#F00" dur="1s" fill="remove">
     animate = document.createElementNS( this.svgns, 'animate' );
@@ -172,10 +172,10 @@ ECG.prototype.animate = function()
     animate.setAttribute( 'dur', '1s' );
     animate.setAttribute( 'fill', 'remove' );
 
-    polyline.appendChild( animate );
+    path.appendChild( animate );
 }
 
-ECG.prototype.polyline = function( size )
+ECG.prototype.path = function( size )
 {
     // id="path"
     // stroke-dasharray="500,300"
@@ -186,24 +186,24 @@ ECG.prototype.polyline = function( size )
     // id="stroke"
     // fill="none"
 
-    var line = document.createElementNS( this.svgns, 'polyline' );
-    line.setAttribute( 'xmlns', this.svgns );
-    line.setAttribute( 'xmlns:xlink', 'http://www.w3.org/1999/xlink'  );
-    line.setAttribute( 'width', this.window_width );
-    line.setAttribute( 'height', 100 );
+    var path = document.createElementNS( this.svgns, 'path' );
+    path.setAttribute( 'xmlns', this.svgns );
+    path.setAttribute( 'xmlns:xlink', 'http://www.w3.org/1999/xlink'  );
+    path.setAttribute( 'width', this.window_width );
+    path.setAttribute( 'height', 100 );
 
-    // line.setAttribute( 'onmouseover', 'update_stroke()' );
+    // path.setAttribute( 'onmouseover', 'update_stroke()' );
 
-    line.setAttribute( 'id', 'path' );
-    line.setAttribute( 'fill', 'none' );
-    line.setAttribute( 'stroke', '#FFF' );
-    line.setAttribute( 'stroke-width', 3 );
-    line.setAttribute( 'stroke-dasharray', this.total_length );
-    line.setAttribute( 'stroke-dashoffset', this.total_length );
-    line.setAttribute( 'fill', 'none' );
-    line.setAttribute( 'points', this.draw() );
+    path.setAttribute( 'id', 'path' );
+    path.setAttribute( 'fill', 'none' );
+    path.setAttribute( 'stroke', '#FFF' );
+    path.setAttribute( 'stroke-width', 3 );
+    path.setAttribute( 'stroke-dasharray', this.total_length );
+    path.setAttribute( 'stroke-dashoffset', this.total_length );
+    path.setAttribute( 'fill', 'none' );
+    path.setAttribute( 'd', this.draw() );
     var svg = doc.id( 'svg' );
-    svg.appendChild( line );
+    svg.appendChild( path );
 
     this.set_total_length();
 
@@ -212,7 +212,7 @@ ECG.prototype.polyline = function( size )
 
 var ecg = new ECG();
 ecg.svg();
-ecg.polyline();
+ecg.path();
 
 function update_size()
 {
@@ -232,7 +232,7 @@ function update_size()
     // svg.setAttribute( 'viewBox', '0 0 ' +  this.window_width + ' ' + Math.floor( 100 * ratio  ) );
 
     doc.id( 'svg' ).innerHTML = '';
-    ecg.polyline();
+    ecg.path();
 
     var svg = doc.id( 'svg' );
     svg.setAttribute( 'width', ecg.window_width );
