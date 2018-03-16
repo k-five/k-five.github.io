@@ -165,20 +165,22 @@ body
     border: 3px #FFF solid;
 
     background-color: #EEE;
-    -webkit-transition: background-color 1s, letter-spacing 1s;
-    -o-transition: background-color 1s, letter-spacing 1s;
-    transition: background-color 1s, letter-spacing 1s;
+    -webkit-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
 }
 
 .contact li a:hover
 {
     background-color: #FF0;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    font-weight: bold;
 }
 
 .app li a:hover
 {
     background-color: #8F0;
+    font-weight: bold;
 }
 
 .familiar
@@ -229,6 +231,7 @@ div a:active
 {
     background-color: #0FF;
     color: #000;
+    font-weight: bold;
 }
 
 li
