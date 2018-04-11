@@ -234,6 +234,7 @@ div a:active
     background-color: #0FF;
     color: #000;
     font-weight: bold;
+    overflow: hidden;
 }
 
 li
